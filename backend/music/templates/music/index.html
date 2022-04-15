@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {% load static %}
+        <link rel="stylesheet" href='{% static 'css/style.css'%}'/>
+        <title>Rating Retrieval</title>
+    </head>
+    <body>
+        <div class="formContent">
+            <div class="form_contain">
+                <div class="header">
+                    <br>
+                    <h1>Retrieve your Music Ratings!</h1>
+                    <br>
+                </div>
+                <div class="form">
+                    <form action="" method="GET">
+                        Username: <input type="text" name="Username" value="Enter your username" id="fill-in"/><br><br>
+                        <input type="Submit" name="Submit_Username" value="Submit" id="submit"/>
+                    </form>
+                </div>
+                <br>
+                <hr>
+                <br>
+                <div class="header2">
+                    <h3>Enter an artist's name to see fun facts!</h3>
+                </div>
+                <div class="form">
+                    <p>Try Bill Evans!<p>
+                    <br>
+                    <form action="" method="GET">
+                        Artist: <input type="text" name="Artist" value="Enter the artist's name" id="fill-in"/><br><br>
+                        <input type="Submit" name="Submit_Artist" value="Submit" id="submit2"/>
+                    </form>
+                </div>
+                <div class="django">
+                {% if submit_username_button == "Submit" or submit_artist_button == "Submit" %}
+                    <br> {{ message }} </br>
+                {% endif %}
+                {% for item in query %}
+                    <br>{{ item }}
+                {% endfor %}
+                </div>
+                <br>
+            </div>
+            <hr>
+            <div class="registration">
+                <br>
+                <h2>New User?</h2>
+                <br>
+                <a href="{% url 'music:registration' %}">Click Here to Register!</a>
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+        
+    </body>
+</html>
+</DOCTYPE>

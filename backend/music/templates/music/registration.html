@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {% load static %}
+        <link rel="stylesheet" href='{% static 'css/style1.css'%}'/>
+        <title>Registration</title>
+    </head>
+    <body>
+        <div class="formContent">
+            <h2>Registration</h2>
+            <form class="form" action="" method="post">
+                {% csrf_token %}
+                <span>Username: <input type="text" name="username" required id="username"/></span>
+                <br>
+                <br>
+                <span>Password: <input type="password" name="password" required id="password"/></span>
+                <br>
+                <br>
+                <span><input type="submit" name="register" value="Register" id="register_click"></span>
+            </form>
+            <br>
+            <div id="register">
+            {% if register_button == "Register" %}
+            <h4> {{ error_message }} </h4>
+            {% endif %}
+            </div>
+            <div class="main">
+                <a href="{% url 'music:index' %}">Return to Rating Page</a>
+            </div>
+        </div>
+
+        
+    </body>
+</html>
+</DOCTYPE>
