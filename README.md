@@ -1,39 +1,41 @@
-# comp333-hw3
+# Homework 3 (Matt, Michael, Rome)
+*All work was distributed evenly among all team members
 
-Created by Michael Renda, Rome Duong, and Matthew Kim
-
-## Step 1: Creating and launching the virtual environment
-
-Open up your terminal. Then, execute the following command to create the Python virtual environment:
-```bash
-python3 -m venv django-react
+## Setting up Application
+1. Extract all both the Front-end and Back-end to the same folder
+2. Change directory into Front-end folder and run the following:
+```
+npm install
 ```
 
-Then, execute the following command on Mac (remove .fish for a different shell):
-```bash
-source django-react/bin/activate.fish
+to run the app
+```
+npm start
 ```
 
-or this command on Windows:
-
-```bash
-.\django-react\bin\activate
+## Accessing Backend and REST
+### 1. Site for Admin
+```
+http://127.0.0.1:8000/admin/
+```
+* **Username**: john
+* **Password**: doe
+* 
+### 2. Site for API
+```
+http://127.0.0.1:8000/api/
 ```
 
-to enter the environment.
 
-## Step 2: Installing Django
+## Small Features
+   1. **Song Table**:
+    <br> A table that shows a much more specific breakdown of each individual song. For each song, the table shows the title, the artist, the average rating, and the amount of users who rated the songs.
 
-Run `pip3 install django` to install Django in the virtual environment, and then cd into the backend folder within the project. Once inside the backend folder, you can run `python3 manage.py runserver` to start the Django backend server.
+   2. **Statistics Feature; Top artist**:
+    <br> This feature shows ranking of the song based on the amount of users rating those songs. This feature gives an idea of which song is currently trendy on the platform based on other users' interactions.
 
-## Step 3: Installing React
+   3. **Login/Registration Page**:
+    <br> User is able to login with their username and password. Once logged in, their username is shown at the top right corner of the Home page. Additionally, new users can register their username and password. In the case that there is a username duplication, there would be an error message indication to inform the user. 
 
-For macOS, install node.js and npm via homebrew using
 
-```bash
-
-```
-
-mention running npm install and npm install --save form-data
-
-run npm install react-router-dom
+### THIS WAS MADE FOR COMP333 SOFTWARE ENGINEERING CLASS AT WESLEYAN UNIVERSITY. THIS IS FOR FICTIONAL PURPOSES ONLY.
